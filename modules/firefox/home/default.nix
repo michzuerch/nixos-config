@@ -12,8 +12,8 @@ in {
   config = mkIf cfg.enable {
     programs.firefox = {
       enable = true;
-      profiles.smj = {
-        name = "smj";
+      profiles.michzuerch = {
+        name = "michzuerch";
         isDefault = true;
         search = {
           default = "DuckDuckGo";

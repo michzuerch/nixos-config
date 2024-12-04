@@ -1,5 +1,5 @@
 {
-  description = "Personal Flake NixOS config - RaySlash";
+  description = "NixOS config - michzuerch";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";

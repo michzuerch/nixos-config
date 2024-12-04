@@ -6,13 +6,13 @@
   ...
 }: let
   inherit (lib) mkEnableOption mkIf;
-  cfg = config.custom.users.smj;
+  cfg = config.custom.users.michzuerch;
 in {
-  options.custom.users.smj = {enable = mkEnableOption "users.smj";};
+  options.custom.users.michzuerch = {enable = mkEnableOption "users.michzuerch";};
 
   config = mkIf cfg.enable {
     users.users = {
-      smj = {
+      michzuerch = {
         isNormalUser = true;
         extraGroups = ["wheel" "podman" "docker" "audio" "video" "networkmanager"];
         shell = pkgs.zsh;

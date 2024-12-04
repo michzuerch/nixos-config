@@ -7,7 +7,8 @@ in {
     nix-essentials = import ./nix/module.nix;
     theme-custom = import ./themes/module.nix;
     zsh-custom = import ./zsh/module.nix;
-    smj = import ./users/smj/module.nix;
+    #smj = import ./users/smj/module.nix;
+    michzuerch = import ./users/michzuerch/module.nix;
   };
 
   homeModules = {
@@ -18,7 +19,8 @@ in {
     nix-addons = import ./nix/home.nix;
     theme-addons = import ./themes/home;
     wezterm-addons = import ./wezterm/home;
-    smj = import ./users/smj/home;
+    #smj = import ./users/smj/home;
+    michzuerch = import ./users/michzuerch/home;
   };
 
   pkgs = {nvimcat = nvimcat.packages;};

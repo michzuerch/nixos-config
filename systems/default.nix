@@ -28,7 +28,7 @@
                 useGlobalPkgs = true;
                 useUserPackages = true;
                 extraSpecialArgs = {inherit inputs;};
-                users.smj = {
+                users.michzuerch = {
                   pkgs,
                   config,
                   ...
@@ -46,6 +46,10 @@
         ++ attrValues moduleSet.osModules;
     };
 in {
+  thinkpadnomad = mkNixos {
+    modules = [./thinkpadnomad/configuration.nix];
+    home = ./thinkpadnomad/home;
+  };
   frost = mkNixos {
     modules = [./frost/configuration.nix];
     home = ./frost/home;

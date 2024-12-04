@@ -35,7 +35,7 @@ in {
         enable = true;
         clean.enable = true;
         clean.extraArgs = "--keep-since 4d --keep 3";
-        flake = "/home/smj/dotfiles";
+        flake = "/home/michzuerch/Source/nixos-config";
       };
       direnv = {
         enable = true;

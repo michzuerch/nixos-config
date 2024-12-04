@@ -10,7 +10,7 @@ in {
   options.custom.wezterm = {enable = mkEnableOption "wezterm";};
 
   config = mkIf cfg.enable {
-    home.file."/home/smj/.config/wezterm/sessionizer.lua".source =
+    home.file."/home/michzuerch/.config/wezterm/sessionizer.lua".source =
       ./sessionizer.lua;
 
     programs.wezterm = {

@@ -1,4 +1,5 @@
-{ lib, fetchFromGitHub, rustPlatform, installShellFiles, makeWrapper, ... }: {
+{ lib, fetchFromGitHub, rustPlatform, installShellFiles, makeWrapper, ... }: 
+{
 
 rustPlatform.buildRustPackage = {
   pname = "typstudio";
@@ -19,19 +20,19 @@ rustPlatform.buildRustPackage = {
     makeWrapper
   ];
 
-  preInstall = "
+  preInstall = ''
     local conf=src-tauri/tauri.conf.json
 	  jq '.tauri.bundle.active |= false' "$conf" | sponge "$conf"
     pnpm install --frozen-lockfile
     export RUSTUP_TOOLCHAIN=stable
     cargo fetch --locked --target "$CARCH-unknown-linux-gnu" --manifest-path src-tauri/Cargo.toml
-  ";
+  '';
 
-  installFlags = "
+  installFlags = ''
     export RUSTUP_TOOLCHAIN=stable
     export CARGO_TARGET_DIR=target
     cargo-tauri build
-  ";
+'';
 
   meta = with lib; {
     description = "A W.I.P desktop application for a new markup-based typesetting language, typst. Typstudio is built using Tauri.";

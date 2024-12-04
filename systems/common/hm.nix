@@ -20,7 +20,8 @@
     hyprland-addons.enable = true;
     nix-addons.enable = true;
     themes-addons.enable = true;
-    users.smj.enable = true;
+    #users.smj.enable = true;
+    users.michzuerch.enable = true;
   };
 
   systemd.user.startServices = "sd-switch";
