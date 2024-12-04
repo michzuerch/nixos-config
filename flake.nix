@@ -43,7 +43,7 @@
       imports = [inputs.flake-parts.flakeModules.flakeModules];
 
       systems = inputs.nixpkgs.lib.systems.flakeExposed;
-      debug = true;
+      #debug = true;
 
       perSystem = {
         system,

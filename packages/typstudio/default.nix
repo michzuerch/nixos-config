@@ -1,4 +1,4 @@
-{ lib, fetchFromGitHub, rustPlatform, installShellFiles, makeWrapper, ... }: 
+/* { lib, fetchFromGitHub, rustPlatform, installShellFiles, makeWrapper, ... }: 
 {
 
 rustPlatform.buildRustPackage = {
@@ -41,3 +41,6 @@ rustPlatform.buildRustPackage = {
     maintainers = [ maintainers.rayslash ];
   };
 }
+ */
+
+
