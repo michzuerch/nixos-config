@@ -19,7 +19,7 @@
   };
 
   boot = {
-    kernelPackages = pkgs.linuxPackages_latest;
+    #kernelPackages = pkgs.linuxPackages_latest;
     consoleLogLevel = 0;
     initrd = {
       enable = true;
@@ -74,6 +74,8 @@
       gtop
       fastfetch
       neovim
+      mc
+      yazi
 
       pciutils
       lshw
