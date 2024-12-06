@@ -56,6 +56,8 @@
       disko
       git
       gh
+      gtop
+      fastfetch
 
       pciutils
       lshw
