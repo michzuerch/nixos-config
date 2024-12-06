@@ -436,11 +436,11 @@
     },
     "nurpkgs": {
       "locked": {
-        "lastModified": 1733484765,
-        "narHash": "sha256-6CeTGuVXapUBajXoP0XH54SoLKc+/oM5KYzh7JhunPw=",
+        "lastModified": 1733494093,
+        "narHash": "sha256-iWAAIbHd28iuOxOyX7zqpwK9jUyHrpdUlRZxcTI9I5o=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "99df7e8fe0425045be076f3b7f9f26cc6348cefc",
+        "rev": "5dea4451692b2fcca7ff5055884e2a56546e0ade",
         "type": "github"
       },
       "original": {
@@ -452,11 +452,11 @@
     "plugins-neogit": {
       "flake": false,
       "locked": {
-        "lastModified": 1733354386,
-        "narHash": "sha256-l4H6+x6z09SAOADSP9reeBEjQHAQ4yzI0uDLZVkZo0k=",
+        "lastModified": 1733490323,
+        "narHash": "sha256-/N6DxmudBM4XriVm0ibBh70lUB1orB8ftnsY0zK6vtg=",
         "owner": "NeogitOrg",
         "repo": "neogit",
-        "rev": "11e14b67eb19bada54c9eb8bc70a581f358cd175",
+        "rev": "a38945a585794c716b2ff9b25668bb5c089e8cd7",
         "type": "github"
       },
       "original": {

@@ -14,5 +14,5 @@
     imv
   ];
 
-  home.stateVersion = "23.05";
+  home.stateVersion = "25.05";
 }
