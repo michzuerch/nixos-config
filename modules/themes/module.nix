@@ -18,9 +18,9 @@ in {
     fonts = {
       fontDir.enable = true;
       packages = with pkgs; [
-        (nerdfonts.override {fonts = ["IosevkaTerm"];})
-        atkinson-hyperlegible
-        jetbrains-mono
+        #(nerdfonts.override {fonts = ["IosevkaTerm"];})
+        nerd-fonts.atkinson-hyperlegible
+        nerd-fonts.jetbrains-mono
       ];
     };
   };
