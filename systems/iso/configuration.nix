@@ -60,15 +60,12 @@
       neovim
       mc
       yazi
-
       pciutils
       lshw
       networkmanager
       nmap
-      #wezterm
+      gparted
       alacritty
-
-      btrfs-progs
       chromium
     ];
   };
