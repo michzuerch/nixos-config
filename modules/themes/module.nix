@@ -19,7 +19,7 @@ in {
       fontDir.enable = true;
       packages = with pkgs; [
         #(nerdfonts.override {fonts = ["IosevkaTerm"];})
-        nerd-fonts.atkinson-hyperlegible
+        nerd-fonts.iosevka-term
         nerd-fonts.jetbrains-mono
       ];
     };
