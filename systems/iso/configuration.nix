@@ -19,9 +19,24 @@
   };
 
   boot = {
-    initrd.kernelModules = ["wl"];
-    kernelModules = ["wl"];
-    extraModulePackages = with config.boot.kernelPackages; [broadcom_sta];
+    kernelPackages = pkgs.linuxPackages_latest;
+    consoleLogLevel = 0;
+    initrd = {
+      enable = true;
+      systemd.enable = true;
+      verbose = false;
+      availableKernelModules = ["nvme" "xhci_pci" "usb_storage" "sd_mod"];
+    };
+    kernelModules = ["kvm-intel"];
+    kernelParams = [
+      "quiet"
+      "splash"
+      "loglevel=3"
+      "rd.systemd.show_status=false"
+      "rd.udev.log_level=3"
+      "udev.log_priority=3"
+      "nowatchdog"
+    ];
   };
 
   networking = {
@@ -58,12 +73,15 @@
       gh
       gtop
       fastfetch
+      neovim
 
       pciutils
       lshw
       networkmanager
       nmap
-      wezterm
+      #wezterm
+      alacritty
+
       btrfs-progs
       chromium
     ];
