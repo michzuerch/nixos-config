@@ -69,5 +69,5 @@
     systemPackages = with pkgs; [virt-manager man-pages man-pages-posix];
   };
 
-  system.stateVersion = "23.05";
+  system.stateVersion = "25.05";
 }

@@ -35,23 +35,28 @@
   hardware.pulseaudio.enable = false;
 
   environment = {
-    gnome.excludePackages =
-      (with pkgs.gnome; [
-        cheese # webcam tool
-        gnome-music
-        gnome-terminal
-        epiphany # web browser
-        geary # email reader
-        evince # document viewer
-        gnome-characters
-        totem # video player
-        tali # poker game
-        iagno # go game
-        hitori # sudoku game
-        atomix # puzzle game
-      ])
-      ++ (with pkgs; [gnome-photos gedit gnome-tour]);
+    gnome.excludePackages = with pkgs; [
+      gnome-photos
+      gedit
+      gnome-tour
+      cheese
+      gnome-music
+      gnome-terminal
+      gnome-characters
+      epiphany
+      geary
+      evince
+      totem
+      tali
+      atomix
+      hitori
+    ];
     systemPackages = with pkgs; [
+      parted
+      disko
+      git
+      gh
+
       pciutils
       lshw
       networkmanager
@@ -64,5 +69,5 @@
 
   nixpkgs.hostPlatform = {system = "x86_64-linux";};
 
-  system.stateVersion = "23.11";
+  system.stateVersion = "25.05";
 }
