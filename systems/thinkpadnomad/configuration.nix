@@ -20,10 +20,6 @@
   services = {
     udev.packages = with pkgs; [openrgb-with-all-plugins];
     fstrim.enable = true;
-    btrfs.autoScrub = {
-      enable = true;
-      interval = "monthly";
-    };
     xserver = {
       enable = true;
       excludePackages = [pkgs.xterm];
