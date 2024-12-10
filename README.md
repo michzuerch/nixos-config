@@ -40,11 +40,17 @@ sudo nixos-install --flake .#<host>
 ```shell
 sudo parted /dev/vda -- mklabel msdos
 sudo parted /dev/vda -- mkpart primary 1MB -16GB
+sudo parted /dev/vda -- mkpart primary linux-swap -16GB 100%
+sudo parted /dev/vda -- set 1 boot on
 
+sudo mkfs.ext4 -L nixos /dev/vda1
+sudo mkswap -L swap /dev/vda2
 
-sudo mount /dev/sdXX                #Mount all filesystems to /mnt
-git clone https://github.com/RaySlash/nixos-config && cd nixos-config
-rm systems/<host>/hardware-configuration.nix
+sudo mount /dev/vda1 /mnt
+sudo nixos-generate-config --root /mnt
+
+sudo git clone https://github.com/michzuerch/nixos-config && cd nixos-config
+sudo rm systems/<host>/hardware-configuration.nix
 sudo nixos-generate-config --root /mnt
 sudo cp /etc/nixos/hardware-configuration.nix nixos/<host>/
 sudo nixos-install --flake .#<host>

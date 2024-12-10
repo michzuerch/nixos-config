@@ -7,11 +7,16 @@
     kernelPackages = pkgs.linuxPackages_xanmod;
     kernelModules = ["i2c-dev"];
   };
+
   boot.loader = {
-    efi.canTouchEfiVariables = true;
-    systemd-boot = {
+    #efi.canTouchEfiVariables = true;
+    #systemd-boot = {
+    #  enable = true;
+    #  configurationLimit = 8;
+    #};
+    grub = {
       enable = true;
-      configurationLimit = 8;
+      device = "/dev/vda";
     };
   };
 
