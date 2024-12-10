@@ -25,7 +25,7 @@ nix build .#nixosConfigurations.live.config.system.build.isoImage
 > **NOTE:** Replace `<host>` with accurate hostname.
 
 **Clean Install:** Partition and mount root, nix, boot and home using `fdisk` and `mount`.
-
+`
 ```shell
 sudo fdisk /dev/sdX                 #Recommended /, /boot and /nix partitions. Optionally, /home
 sudo mount /dev/sdXX                #Mount all filesystems to /mnt
@@ -35,6 +35,21 @@ sudo nixos-generate-config --root /mnt
 sudo cp /etc/nixos/hardware-configuration.nix nixos/<host>/
 sudo nixos-install --flake .#<host>
 ```
+
+
+```shell
+sudo parted /dev/vda -- mklabel msdos
+sudo parted /dev/vda -- mkpart primary 1MB -16GB
+
+
+sudo mount /dev/sdXX                #Mount all filesystems to /mnt
+git clone https://github.com/RaySlash/nixos-config && cd nixos-config
+rm systems/<host>/hardware-configuration.nix
+sudo nixos-generate-config --root /mnt
+sudo cp /etc/nixos/hardware-configuration.nix nixos/<host>/
+sudo nixos-install --flake .#<host>
+```
+
 
 ## Reference
 
