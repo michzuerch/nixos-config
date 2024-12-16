@@ -54,10 +54,6 @@ in {
     modules = [./frost/configuration.nix];
     home = ./frost/home;
   };
-  dell = mkNixos {
-    modules = [./dell/configuration.nix];
-    home = ./dell/home;
-  };
   live = mkNixos {
     modules = [
       (inputs.nixpkgs
