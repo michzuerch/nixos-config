@@ -54,10 +54,6 @@ in {
     modules = [./frost/configuration.nix];
     home = ./frost/home;
   };
-  rpi = mkNixos {
-    modules = [./rpi/configuration.nix];
-    home = ./rpi/home;
-  };
   dell = mkNixos {
     modules = [./dell/configuration.nix];
     home = ./dell/home;
